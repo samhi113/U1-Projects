@@ -28,6 +28,6 @@ public class Sales {
         price = Double.parseDouble(JOptionPane.showInputDialog("Whats the price for the item?"));
         discount = Integer.parseInt(JOptionPane.showInputDialog("What Discount percentage? (No % sign)"));
         numBuying = Integer.parseInt(JOptionPane.showInputDialog("How many are you buying?"));
-        salesTax = Double.parseDouble(JOptionPane.showInputDialog("What's the tax %? (no % sign)"))
+        salesTax = Double.parseDouble(JOptionPane.showInputDialog("What's the tax %? (no % sign)"));
     }
 }
