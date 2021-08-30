@@ -1,3 +1,7 @@
+import org.w3c.dom.html.HTMLOptGroupElement;
+
+import javax.swing.JOptionPane;
+
 public class Sales {
 
     /*Write a program, using dialog boxes, which prompts the user to enter a quantity, price, discount(as an integer) and sales tax(as an integer).
@@ -16,4 +20,14 @@ public class Sales {
     Tax Total: $1.57
     Total Cost: $24.03
      */
+
+    public static void main(String[] args) {
+        int discount, numBuying;
+        double price, salesTax, subtotal, taxTotal, total;
+
+        price = Double.parseDouble(JOptionPane.showInputDialog("Whats the price for the item?"));
+        discount = Integer.parseInt(JOptionPane.showInputDialog("What Discount percentage? (No % sign)"));
+        numBuying = Integer.parseInt(JOptionPane.showInputDialog("How many are you buying?"));
+        salesTax = Double.parseDouble(JOptionPane.showInputDialog("What's the tax %? (no % sign)"))
+    }
 }
