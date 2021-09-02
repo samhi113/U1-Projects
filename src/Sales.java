@@ -28,10 +28,10 @@ public class Sales {
         numBuying = Integer.parseInt(JOptionPane.showInputDialog("How many are you buying?"));
         salesTax = Double.parseDouble(JOptionPane.showInputDialog("What's the tax %? (no % sign)"));
 
-        subtotal = price * numBuying;
-        taxTotal = subtotal * (salesTax/100);
-        total = (subtotal + taxTotal) * (1-(discount/100.0));
-        discount = subtotal * (discount / 100);
+        subtotal = (double)Math.round(price * numBuying * 100)/100;
+        taxTotal = (double)Math.round(subtotal * (salesTax/100) * 100)/100;
+        total = (double)Math.round((subtotal + taxTotal) * (1-(discount/100.0)) * 100)/100;
+        discount = (double)Math.round(subtotal * discount)/100;
 
         JOptionPane.showMessageDialog(null, "Subtotal: $" + subtotal + "\n" + "Tax: $" + taxTotal + "\n" + "Discount: $" + discount + "\n" + "Total: $" + total);
 
